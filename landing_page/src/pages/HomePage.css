@@ -1,6 +1,6 @@
 .about {
   height: 85vh;
-  background-image: url("./background.jpg");
+  background-image: url("/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 130%;
 }
