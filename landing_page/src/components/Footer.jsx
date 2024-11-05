@@ -15,7 +15,8 @@ export default function Footer() {
         bgcolor: "#1A2027",
         color: "#fff",
         marginTop: "auto",
-        padding: 3,
+        paddingTop: 3,
+        width: "100vw",
       }}
     >
       <Grid container spacing={2} justifyContent="center">

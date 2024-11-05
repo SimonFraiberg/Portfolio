@@ -13,7 +13,7 @@ export default function Resume() {
           workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
         >
           <div className="pdfScreen">
-            <Viewer className="worker" fileUrl="my_Resume.pdf" />
+            <Viewer className="worker" fileUrl="/my_Resume.pdf" />
           </div>
         </Worker>
       </div>
