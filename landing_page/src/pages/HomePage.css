@@ -66,3 +66,33 @@
   backdrop-filter: blur(5px); /* Adjust blur intensity */
   border-radius: 1000px;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  /* Stack elements vertically */
+  .about {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* Adjust font sizes for readability on smaller screens */
+  .greeting h1 {
+    font-size: 1.5rem;
+  }
+
+  .greeting h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Reduce image sizes on small screens */
+  .photoCircle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .programmer {
+    width: 40%;
+    bottom: 10vh;
+    margin-top: 15px;
+  }
+}
