@@ -1,0 +1,14 @@
+.projects {
+  height: 100vh;
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: rgb(45, 0, 74);
+  background: linear-gradient(
+    90deg,
+    rgba(45, 0, 74, 1) 0%,
+    rgba(106, 18, 136, 1) 58%,
+    rgba(135, 101, 152, 1) 100%
+  );
+}

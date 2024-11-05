@@ -1,0 +1,67 @@
+.about {
+  height: 85vh;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 130%;
+}
+
+.programmer {
+  width: 35vh;
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%;
+  font-size: 3rem; /* Adjust size as needed */
+  padding-left: 10px;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.greeting {
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+}
+
+.profile {
+  width: 50px;
+}
+
+.photoCircle {
+  width: 28vw;
+  position: absolute;
+  right: 15vw;
+  top: 10vh;
+  backdrop-filter: blur(5px); /* Adjust blur intensity */
+  border-radius: 1000px;
+}
