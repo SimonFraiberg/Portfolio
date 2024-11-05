@@ -2,3 +2,13 @@
   transform: scale(1.7);
   padding-right: 2px;
 }
+
+.toolbar {
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .toolbar {
+    margin-left: 5vw;
+  }
+}

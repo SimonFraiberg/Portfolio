@@ -60,11 +60,11 @@ export default function MyBar() {
         position: "fixed",
       }}
     >
-      <Toolbar sx={{ margin: "auto" }}>
+      <Toolbar className="toolbar">
         {isMobile ? (
           <>
             <IconButton
-              sx={{ mr: 25 }}
+              sx={{ position: "absolute", left: 0, p: 0 }}
               color="inherit"
               onClick={toggleDrawer(true)}
             >
