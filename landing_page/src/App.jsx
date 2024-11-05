@@ -13,7 +13,7 @@ export default function App() {
         <MyBar />
         <DynamicBackground />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/*" element={<HomePage />} />
           <Route path="projects" element={<Projects />} />
           <Route path="resume" element={<Resume />} />
         </Routes>
