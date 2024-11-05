@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <>
       <Grid
-        sx={{ m: "auto", mt: 15, mb: 10, maxWidth: "50%" }}
+        sx={{ m: "auto", mt: 15, mb: 30, maxWidth: "50%" }}
         container
         spacing={10}
         justifyContent="center"
