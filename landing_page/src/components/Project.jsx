@@ -12,10 +12,12 @@ export default function Project({ headline, subHeadline, img, text }) {
   return (
     <Card
       sx={{
-        m: 0,
+        m: "5vw",
+        marginBottom: "0",
+        p: "10px",
         border: 2,
         borderRadius: 5,
-        minHeight: "70vh",
+        minHeight: "85vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -30,7 +32,11 @@ export default function Project({ headline, subHeadline, img, text }) {
           alt={headline}
         />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            sx={{ fontSize: "1.2rem" }}
+            variant="body2"
+            color="text.secondary"
+          >
             {text}
           </Typography>
         </CardContent>

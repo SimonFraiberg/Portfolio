@@ -11,7 +11,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <MyBar />
-        <DynamicBackground />
+        <DynamicBackground id="particles" />
         <Routes>
           <Route path="/*" element={<HomePage />} />
           <Route path="projects" element={<Projects />} />

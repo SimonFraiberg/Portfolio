@@ -1,16 +1,30 @@
-.about {
-  height: 85vh;
+.greetingContainer {
   background-image: url("/background.jpg");
-  background-repeat: no-repeat;
   background-size: 100% 130%;
+  padding-bottom: 100px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+
+  top: 0;
+}
+
+.aboutMe {
   padding-bottom: 100px;
 }
 
+.aboutMe h1 {
+  color: rgb(255, 251, 251, 0.85);
+}
+
 .programmer {
-  width: 35vh;
-  position: absolute;
-  bottom: 0;
-  z-index: 1000;
+  padding-top: 10vh;
+}
+.aboutPaper {
+  color: rgb(255, 251, 251, 0.85);
+  padding: 2vw;
+  margin: 2vw;
+  font-size: 1.2rem;
 }
 
 .wave {
@@ -19,6 +33,20 @@
   transform-origin: 70% 70%;
   font-size: 3rem; /* Adjust size as needed */
   padding-left: 10px;
+}
+
+.greeting h1 {
+  color: rgb(255, 251, 251, 0.85);
+}
+
+.greeting h2 {
+  color: rgb(223, 216, 216);
+}
+
+.greeting {
+  padding-top: 15vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 @keyframes wave-animation {
@@ -48,21 +76,13 @@
   }
 }
 
-.greeting {
-  position: absolute;
-  top: 20vh;
-  left: 10vw;
-}
-
 .profile {
   width: 50px;
 }
 
 .photoCircle {
-  width: 28vw;
-  position: absolute;
-  right: 15vw;
-  top: 10vh;
+  height: 70vh;
+  padding-top: 2vw;
   backdrop-filter: blur(5px); /* Adjust blur intensity */
   border-radius: 1000px;
 }
@@ -75,12 +95,19 @@
     padding: 10px;
   }
 
+  .greeting {
+    font-size: small;
+  }
+
   /* Adjust font sizes for readability on smaller screens */
   .greeting h1 {
+    color: white;
     font-size: 1.5rem;
   }
 
   .greeting h2 {
+    color: white;
+
     font-size: 1.2rem;
   }
 

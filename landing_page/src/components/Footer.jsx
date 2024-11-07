@@ -17,6 +17,7 @@ export default function Footer() {
         marginTop: "auto",
         paddingTop: 3,
         width: "100%",
+        zIndex: 2000,
       }}
     >
       <Grid container spacing={2} justifyContent="center">
