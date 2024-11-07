@@ -125,12 +125,6 @@
     font-size: 1.2rem;
   }
 
-  /* Reduce image sizes on small screens */
-  .photoCircle {
-    width: 120px;
-    height: 120px;
-  }
-
   .programmer {
     width: 40%;
     bottom: 10vh;
