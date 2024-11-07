@@ -126,8 +126,7 @@
   }
 
   .programmer {
-    width: 40%;
-    bottom: 10vh;
-    margin-top: 15px;
+    width: 50%;
+    margin-left: 10vw;
   }
 }
