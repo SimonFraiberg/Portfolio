@@ -34,6 +34,9 @@
   padding: 2px 4px;
   border-radius: 4px;
 }
+.aboutMeTitle {
+  position: relative;
+}
 
 .wave {
   display: inline-block;
@@ -87,10 +90,13 @@
 .profile {
   width: 50px;
 }
+.titleAbout {
+  margin: 1;
+}
 
 .photoCircle {
   height: 70vh;
-  padding-top: 2vw;
+  margin-top: 15vh;
   backdrop-filter: blur(5px); /* Adjust blur intensity */
   border-radius: 1000px;
 }

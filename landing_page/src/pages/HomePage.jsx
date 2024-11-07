@@ -55,7 +55,8 @@ export default function HomePage() {
             zIndex={100}
             size={{ xs: 12, md: 7 }}
           >
-            <h1>About Me</h1>
+            <h1 className="titleAbout">About Me</h1>
+
             <DemoPaper className="aboutPaper" square={false}>
               <div>
                 <p>
