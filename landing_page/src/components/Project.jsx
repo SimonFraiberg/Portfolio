@@ -14,10 +14,9 @@ export default function Project({ headline, subHeadline, img, text }) {
       sx={{
         m: "5vw",
         marginBottom: "0",
-        p: "10px",
         border: 2,
         borderRadius: 5,
-        minHeight: "85vh",
+        minHeight: "90vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",

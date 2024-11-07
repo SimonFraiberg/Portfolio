@@ -78,6 +78,7 @@ export default function MyBar() {
               <List>
                 {menuItems.map((item, index) => (
                   <ListItem
+                    sx={{ marginRight: "20px" }}
                     button
                     key={index}
                     onClick={() => {

@@ -17,6 +17,34 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Apply styles to the scrollbar track */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust width as needed */
+}
+
+/* Scrollbar track background - darker */
+::-webkit-scrollbar-track {
+  background: #2e2e2e; /* Dark gray background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #8b3c98; /* Purple color */
+  border-radius: 10px; /* Rounded corners for thumb */
+  border: 2px solid #2e2e2e; /* Adds padding around the thumb */
+}
+
+/* Scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a24bad; /* Slightly brighter purple on hover */
+}
+
+.scrollable-container {
+  scrollbar-color: #8b3c98 #2e2e2e; /* Thumb color and darker track color */
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+}
+
 a {
   font-weight: 500;
   color: #646cff;

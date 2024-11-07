@@ -21,7 +21,7 @@ export default function Footer() {
       }}
     >
       <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} md={4} sx={{ pr: 3 }}>
+        <Grid item xs={12} md={4}>
           <Typography variant="h6" textAlign="center">
             Contact Me
           </Typography>
@@ -29,7 +29,7 @@ export default function Footer() {
             Email: simonfraiberg@gmail.com
           </Typography>
         </Grid>
-        <Grid item xs={12} md={4} textAlign="center">
+        <Grid item xs={12} md={4}>
           <IconButton
             href="https://www.linkedin.com/in/simon-fraiberg"
             target="_blank"

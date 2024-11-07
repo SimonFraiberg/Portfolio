@@ -5,10 +5,12 @@ import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid2";
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
-  backgroundColor: "rgb(57, 17, 81)",
-  color: "rgb(255, 251, 251, 0.85)",
+  background: "linear-gradient(135deg, #4a148c 30%, #8e24aa 90%)",
+  color: "rgba(255, 255, 255, 0.9)",
+  padding: "20px",
+  borderRadius: "8px",
+  boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
 }));
-
 export default function HomePage() {
   return (
     <>
@@ -60,30 +62,40 @@ export default function HomePage() {
                   I am a recent graduate from Bar Ilan University, holding a BSc
                   in Computer Science. My passion for technology began in my
                   childhood, leading me to major in computer science during high
-                  school. This early interest guided me to roles such as Network
-                  Administrator in the army and Help Desk Technician, where I
-                  gained valuable experience in IT and technical
+                  school. This early interest guided me to roles such as{" "}
+                  <span className="highlight">Network Administrator</span> in
+                  the army and{" "}
+                  <span className="highlight">Help Desk Technician</span>, where
+                  I gained valuable experience in IT and technical
                   problem-solving.
                 </p>
                 <p>
                   Motivated to advance my skills, I pursued a degree at Bar Ilan
-                  University, where I discovered a strong affinity for
-                  full-stack development. This experience has set me on a path
-                  dedicated to creating comprehensive, user-centered
-                  applications.
+                  University, where I discovered a strong affinity for{" "}
+                  <span className="highlight">full-stack development</span>.
+                  This experience has set me on a path dedicated to creating
+                  comprehensive, user-centered applications.
                 </p>
                 <p>
-                  Throughout my studies, I developed a range of projects using
-                  JavaScript, TypeScript, and Node.js to build RESTful APIs and
-                  backend services. My specialization in React for front-end
-                  development, coupled with experience in databases like MongoDB
-                  and MySQL, has equipped me with a versatile skill set for
-                  building efficient, scalable solutions.
+                  Throughout my studies, I developed projects using{" "}
+                  <span className="highlight">JavaScript</span>,{" "}
+                  <span className="highlight">TypeScript</span>, and{" "}
+                  <span className="highlight">Node.js</span> to build{" "}
+                  <span className="highlight">RESTful APIs</span> and backend
+                  services. My specialization in{" "}
+                  <span className="highlight">React</span> for front-end
+                  development, combined with experience in databases like{" "}
+                  <span className="highlight">MongoDB</span> and{" "}
+                  <span className="highlight">MySQL</span>, has equipped me with
+                  a versatile skill set for building efficient, scalable
+                  solutions.
                 </p>
                 <p>
                   As I look to the future, I am eager to continue learning and
                   expanding my abilities, contributing to innovative projects
-                  and leveraging my full-stack skills in impactful ways.
+                  and leveraging my{" "}
+                  <span className="highlight">full-stack skills</span> in
+                  impactful ways.
                 </p>
               </div>
             </DemoPaper>
