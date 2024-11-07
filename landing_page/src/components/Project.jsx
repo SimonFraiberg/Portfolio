@@ -20,6 +20,7 @@ export default function Project({ headline, subHeadline, img, text }) {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
+        position: "relative",
       }}
     >
       <div>
