@@ -47,6 +47,7 @@ export default function HomePage() {
                 </p>
               </>
             }
+            link="https://github.com/SimonFraiberg/dibor-Web"
           />
         </Grid>
 
@@ -80,6 +81,7 @@ export default function HomePage() {
                 </p>
               </>
             }
+            link="https://github.com/SimonFraiberg/MidMeetPublic"
           />
         </Grid>
       </Grid>

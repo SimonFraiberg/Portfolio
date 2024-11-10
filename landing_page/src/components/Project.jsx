@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Button, Box } from "@mui/material";
 
-export default function Project({ headline, subHeadline, img, text }) {
+export default function Project({ headline, subHeadline, img, text, link }) {
   return (
     <Card
       sx={{
@@ -46,6 +46,9 @@ export default function Project({ headline, subHeadline, img, text }) {
       ></CardActions>{" "}
       <Button
         variant="outlined"
+        href={link}
+        target="_blank"
+        rel="noopener"
         sx={{
           textTransform: "none",
         }}
