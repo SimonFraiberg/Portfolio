@@ -47,7 +47,7 @@ export default function HomePage() {
                 </p>
               </>
             }
-            link="https://github.com/SimonFraiberg/dibor-Web"
+            link="https://github.com/SimonFraiberg/MidMeetPublic"
           />
         </Grid>
 
@@ -79,9 +79,28 @@ export default function HomePage() {
                   demonstrates my ability to build interactive applications with
                   a strong emphasis on security and user experience.
                 </p>
+                <p>
+                  In addition, Dibor has been optimized for easy deployment with
+                  Docker. Using <strong>docker-compose</strong>, I configured
+                  two containers: one for the backend server (which also runs
+                  the built React app) and another for the MongoDB database.
+                  This setup allows for seamless deployment and ensures the
+                  project runs consistently in any environment without the need
+                  to worry about the underlying infrastructure.
+                </p>
+                <p>
+                  Using Docker improves the project's{" "}
+                  <strong>portability,</strong> <strong>scalability,</strong>{" "}
+                  and <strong>maintainability.</strong> By isolating the app and
+                  database in separate containers, it ensures that both services
+                  can be managed and scaled independently, and that they will
+                  work the same way on different machines. This makes it easier
+                  to test, update, and deploy the app, providing a smoother
+                  development and production workflow.
+                </p>
               </>
             }
-            link="https://github.com/SimonFraiberg/MidMeetPublic"
+            link="https://github.com/SimonFraiberg/DiborDocker"
           />
         </Grid>
       </Grid>
