@@ -21,11 +21,7 @@ export default function HomePage() {
         spacing={1}
         className="greetingContainer"
       >
-        <Grid
-          alignItems="center"
-          justifyContent="center"
-          size={{ xs: 10, md: 7 }}
-        >
+        <Grid alignItems="center" justifyContent="center" size={{ lg: 7 }}>
           <div className="greeting">
             <h1>
               Hello
@@ -37,11 +33,7 @@ export default function HomePage() {
             <h2>And I am a Full Stack Developer</h2>
           </div>
         </Grid>
-        <Grid
-          alignItems="center"
-          justifyContent="center"
-          size={{ xs: 10, md: 5 }}
-        >
+        <Grid alignItems="center" justifyContent="center" size={{ lg: 5 }}>
           <img src="Programmer.png" className="programmer" alt="Programmer" />
         </Grid>
       </Grid>
@@ -53,7 +45,7 @@ export default function HomePage() {
             alignItems="center"
             justifyContent="center"
             zIndex={100}
-            size={{ xs: 12, md: 7 }}
+            size={{ lg: 7 }}
           >
             <h1 className="titleAbout">About Me</h1>
 

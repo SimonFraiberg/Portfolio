@@ -85,6 +85,11 @@
   margin: 1;
 }
 
+.wave {
+  display: inline-block;
+  animation: wave-animation 2.5s ease-in-out infinite;
+}
+
 .photoCircle {
   height: 70vh;
   margin-top: 15vh;
