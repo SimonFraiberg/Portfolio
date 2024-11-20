@@ -5,7 +5,8 @@ import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid2";
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
-  background: "linear-gradient(135deg, #4a148c 30%, #8e24aa 90%)",
+  background: "#00000050",
+  backdropFilter: "blur(5px)",
   color: "rgba(255, 255, 255, 0.9)",
   padding: "20px",
   borderRadius: "8px",

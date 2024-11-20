@@ -12,6 +12,9 @@ export default function Project({ headline, subHeadline, img, text, link }) {
   return (
     <Card
       sx={{
+        background: "#00000060",
+        backdropFilter: "blur(5px)",
+        boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
         m: "5vw",
         marginBottom: "0",
         border: 2,
@@ -24,7 +27,14 @@ export default function Project({ headline, subHeadline, img, text, link }) {
       }}
     >
       <div>
-        <CardHeader title={headline} subheader={subHeadline} />
+        <CardHeader
+          sx={{ color: "white" }}
+          title={headline}
+          subheader={subHeadline}
+          subheaderTypographyProps={{
+            sx: { color: "lightgray" },
+          }}
+        />
         <CardMedia
           sx={{ maxWidth: "50vh", margin: "0 auto" }}
           component="img"
@@ -33,9 +43,8 @@ export default function Project({ headline, subHeadline, img, text, link }) {
         />
         <CardContent>
           <Typography
-            sx={{ fontSize: "1.2rem" }}
+            sx={{ fontSize: "1.2rem", color: "white" }}
             variant="body2"
-            color="text.secondary"
           >
             {text}
           </Typography>
@@ -51,6 +60,11 @@ export default function Project({ headline, subHeadline, img, text, link }) {
         rel="noopener"
         sx={{
           textTransform: "none",
+          color: "white",
+          borderColor: "black",
+          borderBottom: "0px",
+          borderLeft: "0px",
+          borderRight: "0px",
         }}
         startIcon={<GitHubIcon />}
       >

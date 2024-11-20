@@ -11,6 +11,7 @@ import ListItemText from "@mui/material/ListItemText";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
+import BoltIcon from "@mui/icons-material/Bolt";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -38,6 +39,12 @@ export default function MyBar() {
 
   const menuItems = [
     { text: "Home", icon: <HomeOutlinedIcon />, onClick: () => navigate("/") },
+
+    {
+      text: "Skills",
+      icon: <BoltIcon />,
+      onClick: () => navigate("/skills"),
+    },
     {
       text: "Projects",
       icon: <LightbulbOutlinedIcon />,
@@ -104,6 +111,14 @@ export default function MyBar() {
                   fontSize: "1.2rem",
                   px: 2,
                   py: 1,
+                  border: 0,
+
+                  transition: "transform 0.3s",
+                  "&:hover": {
+                    transform: "scale(1.1)",
+                    background: "transparent",
+                    border: 0,
+                  },
                 }}
                 onClick={item.onClick}
                 startIcon={item.icon}

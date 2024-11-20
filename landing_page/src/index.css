@@ -5,11 +5,17 @@
   width: 100%;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+  background: rgb(155, 13, 173);
   background: linear-gradient(
     90deg,
-    rgba(45, 0, 74, 1) 0%,
-    rgba(106, 18, 136, 1) 58%,
-    rgba(135, 101, 152, 1) 100%
+    rgba(155, 13, 173, 1) 0%,
+    rgba(146, 16, 166, 1) 16%,
+    rgba(123, 21, 147, 1) 30%,
+    rgba(106, 25, 128, 1) 38%,
+    rgba(85, 30, 111, 1) 57%,
+    rgba(72, 33, 90, 1) 79%,
+    rgba(56, 34, 80, 1) 90%,
+    rgba(48, 36, 72, 1) 100%
   );
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -61,25 +67,6 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
