@@ -3,16 +3,14 @@ import Project from "../components/Project";
 import * as React from "react";
 import "./Projects.css";
 
-export default function HomePage() {
+export default function Projects() {
   return (
     <>
       <Grid
         className="projectsContainer"
+        container
         spacing={0}
         justifyContent="center"
-        alignItems="center"
-        display="flex"
-        flexDirection={"center"}
       >
         <Grid size={{ xs: 12, md: 6 }}>
           <Project

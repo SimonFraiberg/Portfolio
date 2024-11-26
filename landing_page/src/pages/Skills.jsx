@@ -60,7 +60,13 @@ const categories = {
 
 const Skills = () => {
   return (
-    <Box sx={{ padding: "10vh", textAlign: "center" }}>
+    <Box
+      justifyContent="center"
+      alignItems="center"
+      display="flex"
+      flexDirection="column"
+      sx={{ padding: "10vh", textAlign: "center" }}
+    >
       {Object.keys(categories).map((category) => (
         <Box key={category} sx={{ marginBottom: "2vh" }}>
           <Typography variant="h5" gutterBottom color="white">
