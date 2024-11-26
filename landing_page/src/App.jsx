@@ -22,8 +22,6 @@ export default function App() {
           <Route path="resume" element={<Resume />} />
         </Routes>
       </BrowserRouter>
-
-      <Footer />
     </>
   );
 }

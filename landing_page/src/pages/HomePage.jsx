@@ -3,6 +3,9 @@ import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid2";
+import IconButton from "@mui/material/IconButton";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   background: "#00000050",
@@ -32,6 +35,22 @@ export default function HomePage() {
             </h1>
             <h1>My name is Simon Fraiberg</h1>
             <h2>And I am a Full Stack Developer</h2>
+            <IconButton
+              href="https://www.linkedin.com/in/simon-fraiberg"
+              target="_blank"
+              rel="noopener"
+              color="inherit"
+            >
+              <LinkedInIcon className="icon" />
+            </IconButton>
+            <IconButton
+              href="https://github.com/SimonFraiberg"
+              target="_blank"
+              rel="noopener"
+              color="inherit"
+            >
+              <GitHubIcon className="icon" />
+            </IconButton>
           </div>
         </Grid>
         <Grid alignItems="center" justifyContent="center" size={{ lg: 5 }}>
