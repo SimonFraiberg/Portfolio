@@ -8,9 +8,11 @@ export default function HomePage() {
     <>
       <Grid
         className="projectsContainer"
-        container
         spacing={0}
         justifyContent="center"
+        alignItems="center"
+        display="flex"
+        flexDirection={"center"}
       >
         <Grid size={{ xs: 12, md: 6 }}>
           <Project
@@ -60,7 +62,6 @@ export default function HomePage() {
             headline="Dibor"
             subHeadline="Advanced Programming Final Project"
             img="./dibor.png"
-            
             text={
               <>
                 <p>
