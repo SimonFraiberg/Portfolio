@@ -15,7 +15,6 @@ export default function Project({ headline, subHeadline, img, text, link }) {
         background: "#00000060",
         backdropFilter: "blur(5px)",
         boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
-        m: "5vw",
         marginBottom: "0",
         border: 2,
         borderRadius: 5,

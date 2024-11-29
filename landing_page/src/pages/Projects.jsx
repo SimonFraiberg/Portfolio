@@ -9,7 +9,7 @@ export default function Projects() {
       <Grid
         className="projectsContainer"
         container
-        spacing={0}
+        spacing={15}
         justifyContent="center"
       >
         <Grid size={{ xs: 12, md: 6 }}>

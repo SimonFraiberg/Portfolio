@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid2";
 import IconButton from "@mui/material/IconButton";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import ProgrammerAnimation from "../components/animation/programmer/ProgrammerAnimation";
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   background: "#00000050",
@@ -54,7 +55,7 @@ export default function HomePage() {
           </div>
         </Grid>
         <Grid alignItems="center" justifyContent="center" size={{ lg: 5 }}>
-          <img src="Programmer.png" className="programmer" alt="Programmer" />
+          <ProgrammerAnimation></ProgrammerAnimation>
         </Grid>
       </Grid>
       <Divider />
