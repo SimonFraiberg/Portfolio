@@ -19,7 +19,7 @@ export default function Projects() {
         spacing={15}
         justifyContent="center"
       >
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid size={{ md: 12, lg: 6 }}>
           <Project
             headline="MidMeet"
             subHeadline="Bachelor's Degree Final Project"
@@ -70,7 +70,7 @@ export default function Projects() {
           />
         </Grid>
 
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid size={{ md: 12, lg: 6 }}>
           <Project
             headline="Dibor"
             subHeadline="Advanced Programming Final Project"

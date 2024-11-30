@@ -38,6 +38,7 @@ export default function Project({
             position: "absolute",
             height: "80px",
             right: "0",
+            marginLeft: "20px",
             padding: "15px",
           }}
           src={gif}
