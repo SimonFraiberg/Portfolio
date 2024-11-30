@@ -78,17 +78,7 @@ export default function HomePage() {
         }}
       >
         <Divider />
-        {!scrolled && (
-          <img
-            style={{
-              position: "absolute",
-              left: "48vw",
-              margin: "auto",
-              width: "100px",
-            }}
-            src="/arrow.gif"
-          ></img>
-        )}
+        {!scrolled && <img className="arrow" src="/arrow.gif"></img>}
       </div>
 
       <div className="aboutMe">
