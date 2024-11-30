@@ -7,7 +7,7 @@ import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Button, Box } from "@mui/material";
-
+import "./project.css";
 export default function Project({
   headline,
   subHeadline,
@@ -33,16 +33,7 @@ export default function Project({
       }}
     >
       <div>
-        <img
-          style={{
-            position: "absolute",
-            height: "80px",
-            right: "0",
-            marginLeft: "20px",
-            padding: "15px",
-          }}
-          src={gif}
-        ></img>
+        <img className="gif" src={gif}></img>
 
         <CardHeader
           sx={{ color: "white" }}
