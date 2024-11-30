@@ -7,6 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ProgrammerAnimation from "../components/animation/programmer/ProgrammerAnimation";
+import DogAnimation from "../components/animation/dog/DogAnimation";
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   background: "#00000050",

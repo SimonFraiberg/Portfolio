@@ -17,6 +17,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import "./MyBar.css";
+import GithubCorner from "react-github-corner";
 
 export default function MyBar() {
   const navigate = useNavigate();
@@ -58,77 +59,81 @@ export default function MyBar() {
   ];
 
   return (
-    <AppBar
-      sx={{
-        background: scrolled ? "rgba(0, 0, 0, 0.6)" : "transparent",
-        backdropFilter: scrolled ? "blur(10px)" : "none",
-        transition: "background 0.3s ease, backdrop-filter 0.3s ease",
-        boxShadow: "none",
-        position: "fixed",
-      }}
-    >
-      <Toolbar className="toolbar">
-        {isMobile ? (
-          <>
-            <IconButton
-              sx={{ position: "absolute", left: 0, p: 0 }}
-              color="inherit"
-              onClick={toggleDrawer(true)}
-            >
-              <MenuIcon sx={{ float: "left" }} />
-            </IconButton>
-            <Drawer
-              anchor="left"
-              open={drawerOpen}
-              onClose={toggleDrawer(false)}
-            >
-              <List>
-                {menuItems.map((item, index) => (
-                  <ListItem
-                    sx={{ marginRight: "20px" }}
-                    button
-                    key={index}
-                    onClick={() => {
-                      item.onClick();
-                      setDrawerOpen(false);
-                    }}
-                  >
-                    <ListItemIcon>{item.icon}</ListItemIcon>
-                    <ListItemText primary={item.text} />
-                  </ListItem>
-                ))}
-              </List>
-            </Drawer>
-          </>
-        ) : (
-          <>
-            {menuItems.map((item, index) => (
-              <Button
-                key={index}
-                sx={{
-                  textTransform: "none",
-                  color: "white",
-                  fontSize: "1.2rem",
-                  px: 2,
-                  py: 1,
-                  border: 0,
+    <>
+      <AppBar
+        sx={{
+          background: scrolled ? "rgba(0, 0, 0, 0.6)" : "transparent",
+          backdropFilter: scrolled ? "blur(10px)" : "none",
+          transition: "background 0.3s ease, backdrop-filter 0.3s ease",
+          boxShadow: "none",
+          position: "fixed",
+        }}
+      >
+        <GithubCorner href="https://github.com/SimonFraiberg/Portfolio" />
 
-                  transition: "transform 0.3s",
-                  "&:hover": {
-                    transform: "scale(1.1)",
-                    background: "transparent",
-                    border: 0,
-                  },
-                }}
-                onClick={item.onClick}
-                startIcon={item.icon}
+        <Toolbar className="toolbar">
+          {isMobile ? (
+            <>
+              <IconButton
+                sx={{ position: "absolute", left: 0, p: 0 }}
+                color="inherit"
+                onClick={toggleDrawer(true)}
               >
-                {item.text}
-              </Button>
-            ))}
-          </>
-        )}
-      </Toolbar>
-    </AppBar>
+                <MenuIcon sx={{ float: "left" }} />
+              </IconButton>
+              <Drawer
+                anchor="left"
+                open={drawerOpen}
+                onClose={toggleDrawer(false)}
+              >
+                <List>
+                  {menuItems.map((item, index) => (
+                    <ListItem
+                      sx={{ marginRight: "20px" }}
+                      button
+                      key={index}
+                      onClick={() => {
+                        item.onClick();
+                        setDrawerOpen(false);
+                      }}
+                    >
+                      <ListItemIcon>{item.icon}</ListItemIcon>
+                      <ListItemText primary={item.text} />
+                    </ListItem>
+                  ))}
+                </List>
+              </Drawer>
+            </>
+          ) : (
+            <>
+              {menuItems.map((item, index) => (
+                <Button
+                  key={index}
+                  sx={{
+                    textTransform: "none",
+                    color: "white",
+                    fontSize: "1.2rem",
+                    px: 2,
+                    py: 1,
+                    border: 0,
+
+                    transition: "transform 0.3s",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                      background: "transparent",
+                      border: 0,
+                    },
+                  }}
+                  onClick={item.onClick}
+                  startIcon={item.icon}
+                >
+                  {item.text}
+                </Button>
+              ))}
+            </>
+          )}
+        </Toolbar>
+      </AppBar>
+    </>
   );
 }

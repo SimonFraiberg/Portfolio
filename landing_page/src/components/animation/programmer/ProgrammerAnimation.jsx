@@ -1,13 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Lottie from "lottie-react";
 import programmer from "./programmer.json";
-import dog from "./dog.json";
 
 const ProgrammerAnimation = () => {
   const lottieRef = useRef(null);
 
   useEffect(() => {
-    // Play animation once when the page loads
+    // Play programmer animation once when the page loads
     if (lottieRef.current) {
       lottieRef.current.play();
     }
@@ -33,35 +32,6 @@ const ProgrammerAnimation = () => {
           clearCanvas: true, // Improve performance
         }}
       />
-      <div
-        style={{ display: "flex", alignItems: "center", position: "absolute" }}
-      >
-        <Lottie
-          loop
-          animationData={dog}
-          play={1}
-          style={{
-            width: "15%", // Adjust width as needed
-          }}
-        />
-        <Lottie
-          loop
-          animationData={dog}
-          play={1}
-          style={{
-            width: "15%", // Adjust width as needed
-          }}
-        />
-        <Lottie
-          loop
-          animationData={dog}
-          play={1}
-          style={{
-            width: "20%", // Adjust width as needed
-            paddingBottom: "20px",
-          }}
-        />
-      </div>
     </>
   );
 };
