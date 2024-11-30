@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ProgrammerAnimation from "../components/animation/programmer/ProgrammerAnimation";
-import DogAnimation from "../components/animation/dog/DogAnimation";
+import { useState, useEffect } from "react";
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   background: "#00000050",
@@ -18,6 +18,17 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
   boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
 }));
 export default function HomePage() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <Grid
@@ -59,7 +70,27 @@ export default function HomePage() {
           <ProgrammerAnimation></ProgrammerAnimation>
         </Grid>
       </Grid>
-      <Divider />
+      <div
+        style={{
+          alignContent: "center",
+          alignItems: "center",
+          display: "flex",
+        }}
+      >
+        <Divider />
+        {!scrolled && (
+          <img
+            style={{
+              position: "absolute",
+              left: "48vw",
+              margin: "auto",
+              width: "100px",
+            }}
+            src="/arrow.gif"
+          ></img>
+        )}
+      </div>
+
       <div className="aboutMe">
         <Grid container alignItems="center" justifyContent="center" spacing={1}>
           <Grid

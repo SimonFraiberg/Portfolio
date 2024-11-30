@@ -8,7 +8,14 @@ import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Button, Box } from "@mui/material";
 
-export default function Project({ headline, subHeadline, img, text, link }) {
+export default function Project({
+  headline,
+  subHeadline,
+  img,
+  text,
+  link,
+  gif,
+}) {
   return (
     <Card
       sx={{
@@ -18,7 +25,7 @@ export default function Project({ headline, subHeadline, img, text, link }) {
         marginBottom: "0",
         border: 2,
         borderRadius: 5,
-        minHeight: "90vh",
+        minHeight: "80vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -26,20 +33,26 @@ export default function Project({ headline, subHeadline, img, text, link }) {
       }}
     >
       <div>
+        <img
+          style={{
+            position: "absolute",
+            height: "80px",
+            right: "0",
+            padding: "15px",
+          }}
+          src={gif}
+        ></img>
+
         <CardHeader
           sx={{ color: "white" }}
           title={headline}
+          titleTypographyProps={{ sx: { fontSize: "2rem" } }}
           subheader={subHeadline}
           subheaderTypographyProps={{
-            sx: { color: "lightgray" },
+            sx: { color: "lightgray", fontSize: "1.2rem" },
           }}
-        />
-        <CardMedia
-          sx={{ maxWidth: "50vh", margin: "0 auto" }}
-          component="img"
-          image={img}
-          alt={headline}
-        />
+        ></CardHeader>
+
         <CardContent>
           <Typography
             sx={{ fontSize: "1.2rem", color: "white" }}

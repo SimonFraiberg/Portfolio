@@ -1,6 +1,13 @@
 import Grid from "@mui/material/Grid2";
 import Project from "../components/Project";
 import * as React from "react";
+import { FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiMongodb,
+  SiExpress,
+  SiGooglemaps,
+} from "react-icons/si";
 import "./Projects.css";
 
 export default function Projects() {
@@ -17,6 +24,7 @@ export default function Projects() {
             headline="MidMeet"
             subHeadline="Bachelor's Degree Final Project"
             img="./midMeet.svg"
+            gif="/midmeet.gif"
             text={
               <>
                 <p>
@@ -49,6 +57,13 @@ export default function Projects() {
                   <span className="highlight">Google Authentication</span> for
                   enhanced data security.
                 </p>
+                <div className="tech-icons">
+                  <FaReact title="React" />
+                  <SiTypescript title="TypeScript" />
+                  <SiGooglemaps title="Google Maps API" />
+                  <FaNodeJs title="Node.js" />
+                  <SiMongodb title="MongoDB" />
+                </div>
               </>
             }
             link="https://github.com/SimonFraiberg/MidMeetPublic"
@@ -60,6 +75,7 @@ export default function Projects() {
             headline="Dibor"
             subHeadline="Advanced Programming Final Project"
             img="./dibor.png"
+            gif="/dibor.gif"
             text={
               <>
                 <p>
@@ -85,8 +101,8 @@ export default function Projects() {
                   database, Dibor supports reliable data storage and retrieval,
                   preserving chat history and ensuring data consistency across
                   sessions. This project demonstrates my ability to build
-                  interactive applications with a span className="highlight"
-                  emphasis on security and user experience.
+                  interactive applications with an emphasis on security and user
+                  experience.
                 </p>
                 <p>
                   In addition, Dibor has been optimized for easy deployment with
@@ -98,18 +114,13 @@ export default function Projects() {
                   ensures the project runs consistently in any environment
                   without the need to worry about the underlying infrastructure.
                 </p>
-                <p>
-                  Using Docker improves the project's{" "}
-                  <span className="highlight">portability,</span>{" "}
-                  <span className="highlight">scalability,</span> and{" "}
-                  <span className="highlight">maintainability.</span> By
-                  isolating the app and database in separate containers, it
-                  ensures that both services can be managed and scaled
-                  independently, and that they will work the same way on
-                  different machines. This makes it easier to test, update, and
-                  deploy the app, providing a smoother development and
-                  production workflow.
-                </p>
+                <div className="tech-icons">
+                  <FaReact title="React" />
+                  <FaNodeJs title="Node.js" />
+                  <SiExpress title="Express" />
+                  <SiMongodb title="MongoDB" />
+                  <FaDocker title="Docker" />
+                </div>
               </>
             }
             link="https://github.com/SimonFraiberg/DiborDocker"
