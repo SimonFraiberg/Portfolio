@@ -53,6 +53,17 @@ const categories = {
     { name: "Tailwind CSS", icon: <SiTailwindcss color="#06b6d4" size={50} /> },
   ],
   Tools: [
+    {
+      name: "OpenMP",
+      icon: (
+        <img
+          src="/OpenMp.png"
+          style={{ paddingBottom: "10px", paddingTop: "10px" }}
+          height={30}
+          width={100}
+        />
+      ),
+    },
     { name: "Git", icon: <SiGit color="#f05032" size={50} /> },
     { name: "Docker", icon: <SiDocker color="#2496ed" size={50} /> },
   ],

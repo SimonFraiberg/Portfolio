@@ -10,39 +10,12 @@ import {
   SiCmake,
   SiLinux,
   SiApacheant,
+  SiPython,
+  SiC,
 } from "react-icons/si";
 import "./Projects.css";
-import React, { useEffect, useRef, useState } from "react";
 
 export default function Projects() {
-  const svgRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          // Check if the SVG is in the viewport
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          } else {
-            setIsVisible(false);
-          }
-        });
-      },
-      { threshold: 0.5 } // Adjust threshold as needed (0.5 means 50% visibility)
-    );
-
-    if (svgRef.current) {
-      observer.observe(svgRef.current);
-    }
-
-    return () => {
-      if (svgRef.current) {
-        observer.unobserve(svgRef.current);
-      }
-    };
-  }, []);
   return (
     <>
       <Grid
@@ -174,9 +147,10 @@ export default function Projects() {
                   upload, classify, and view results.
                 </p>
                 <p>
-                  This project utilizes a multithreaded server for handling
-                  multiple clients simultaneously and implements five different
-                  distance formulas within a static distance class.
+                  This project utilizes a{" "}
+                  <span className="highlight">multithreaded</span> server for
+                  handling multiple clients simultaneously and implements five
+                  different distance formulas within a static distance class.
                 </p>
 
                 <div className="image-container">
@@ -222,11 +196,6 @@ export default function Projects() {
                 </p>
 
                 <p>
-                  Built using Java 11 and Apache Ant for project management and
-                  building, this game also includes a simple system to handle
-                  level design and game mechanics.
-                </p>
-                <p>
                   The game can be compiled and run using Apache Ant commands for
                   a smooth development and running experience.
                 </p>
@@ -237,6 +206,87 @@ export default function Projects() {
               </>
             }
             link="https://github.com/SimonFraiberg/Arkanoid"
+          />
+        </Grid>
+        <Grid size={{ md: 12, lg: 6 }}>
+          <Project
+            headline="Merkle Tree with RSA Signing"
+            subHeadline="Network Security Project"
+            gif="/crypto.gif"
+            text={
+              <>
+                <p>
+                  This project implements a{" "}
+                  <span className="highlight">Merkle Tree </span>
+                  with support for cryptographic signing and verification using{" "}
+                  <span className="highlight">RSA keys</span>. The interactive
+                  console-based tool demonstrates features like adding leaves,
+                  computing roots, generating proofs of inclusion, and verifying
+                  root signatures.
+                </p>
+                <p>
+                  The project is developed in{" "}
+                  <span className="highlight">Python</span>, utilizing the{" "}
+                  <span className="highlight">Cryptography</span> library for
+                  secure operations. It showcases key cryptographic concepts
+                  such as{" "}
+                  <span className="highlight">public-private key signing</span>{" "}
+                  and
+                  <span className="highlight">SHA-256 hashing</span>.
+                </p>
+                <p>
+                  Users can:
+                  <ul>
+                    <li>Add leaves to the Merkle Tree</li>
+                    <li>Generate a Merkle Tree root</li>
+                    <li>Sign and verify the root using RSA keys</li>
+                    <li>Validate proofs of inclusion</li>
+                  </ul>
+                </p>
+                <div className="tech-icons">
+                  <SiPython title="Python" />
+                </div>
+              </>
+            }
+            link="https://github.com/SimonFraiberg/MerkleTree"
+          />
+        </Grid>
+        <Grid size={{ md: 12, lg: 6 }}>
+          <Project
+            headline="Parallel BFS"
+            subHeadline="Parallel Programming Project"
+            gif="/parallel_bfs.gif"
+            text={
+              <>
+                <p>
+                  This project implements a parallel BFS (Breadth-First Search)
+                  algorithm for graph traversal. Built using{" "}
+                  <span className="highlight">C</span>, the application
+                  leverages multi-threading with{" "}
+                  <span className="highlight">pthread</span>
+                  to speed up graph traversal by processing multiple nodes
+                  concurrently.
+                </p>
+                <p>
+                  The graph is represented using an adjacency list, and a custom
+                  thread pool is used to manage parallel task execution. The
+                  project demonstrates my ability to implement complex
+                  algorithms with parallel programming techniques and efficient
+                  thread synchronization.
+                </p>
+                <p>
+                  Key components include a custom queue for managing nodes,
+                  <span className="highlight">mutexes</span> for thread safety,
+                  and a <span className="highlight">thread pool</span> for
+                  managing concurrent tasks.
+                </p>
+                <div className="tech-icons">
+                  <SiC title="C" />
+                  <SiLinux title="Linux" />
+                </div>
+              </>
+            }
+            link="https://github.com/SimonFraiberg/ParallelBFS"
           />
         </Grid>
       </Grid>
