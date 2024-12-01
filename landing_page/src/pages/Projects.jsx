@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Grid2";
 import Project from "../components/Project";
-import { FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaDocker, FaJava } from "react-icons/fa";
 import {
   SiTypescript,
   SiMongodb,
@@ -9,6 +9,7 @@ import {
   SiCplusplus,
   SiCmake,
   SiLinux,
+  SiApacheant,
 } from "react-icons/si";
 import "./Projects.css";
 import React, { useEffect, useRef, useState } from "react";
@@ -195,6 +196,47 @@ export default function Projects() {
               </>
             }
             link="https://github.com/SimonFraiberg/AdvancedProgramming-1-part-4"
+          />
+        </Grid>
+
+        <Grid size={{ md: 12, lg: 6 }}>
+          <Project
+            headline="Arkanoid Game"
+            subHeadline="Object-Oriented Programming Project in Java"
+            gif="/arkanoid.gif"
+            text={
+              <>
+                <p>
+                  This is an Arkanoid-style game built using{" "}
+                  <span className="highlight">Java</span> using Object-Oriented
+                  Programming (OOP) principles. The game features a paddle that
+                  moves horizontally to bounce a ball and break blocks, with
+                  progressively challenging levels.
+                </p>
+                <p>
+                  The game is designed to be interactive and features smooth
+                  game animations, different levels with increasing difficulty,
+                  and keyboard controls for interaction. Players control the
+                  paddle using the arrow keys to move it left and right to
+                  bounce the ball and break blocks.
+                </p>
+
+                <p>
+                  Built using Java 11 and Apache Ant for project management and
+                  building, this game also includes a simple system to handle
+                  level design and game mechanics.
+                </p>
+                <p>
+                  The game can be compiled and run using Apache Ant commands for
+                  a smooth development and running experience.
+                </p>
+                <div className="tech-icons">
+                  <FaJava title="Java" />
+                  <SiApacheant title="Apache Ant" />
+                </div>
+              </>
+            }
+            link="https://github.com/SimonFraiberg/Arkanoid"
           />
         </Grid>
       </Grid>

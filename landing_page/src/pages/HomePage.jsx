@@ -140,7 +140,7 @@ export default function HomePage() {
             container
             alignItems="center"
             justifyContent="center"
-            size={{ xs: 12, md: 5 }}
+            size={{ xs: 12, lg: 5 }}
           >
             <img src="profilePic.png" className="photoCircle" alt="Profile" />
           </Grid>

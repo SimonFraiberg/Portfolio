@@ -75,32 +75,30 @@ const Skills = () => {
           <Grid container spacing={3} justifyContent="center">
             {categories[category].map((skill, index) => (
               <Grid item key={index} xs={6} sm={4} md={3} lg={2}>
-                <Tooltip title={skill.name} arrow>
-                  <Box
-                    sx={{
-                      background: "rgba(0, 0, 0, 0.6)", // Semi-transparent black
-                      position: "relative",
-                      minWidth: "100px",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      padding: "10px",
-                      color: "white",
-                      borderRadius: "8px",
-                      boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-                      transition: "transform 0.3s",
-                      "&:hover": {
-                        transform: "scale(1.1)",
-                        boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.2)",
-                      },
-                    }}
-                  >
-                    {skill.icon}
-                    <Typography variant="subtitle1" sx={{ marginTop: "10px" }}>
-                      {skill.name}
-                    </Typography>
-                  </Box>
-                </Tooltip>
+                <Box
+                  sx={{
+                    background: "rgba(0, 0, 0, 0.6)", // Semi-transparent black
+                    position: "relative",
+                    minWidth: "100px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    padding: "10px",
+                    color: "white",
+                    borderRadius: "8px",
+                    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+                    transition: "transform 0.3s",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                      boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.2)",
+                    },
+                  }}
+                >
+                  {skill.icon}
+                  <Typography variant="subtitle1" sx={{ marginTop: "10px" }}>
+                    {skill.name}
+                  </Typography>
+                </Box>
               </Grid>
             ))}
           </Grid>
