@@ -1,16 +1,47 @@
 import Grid from "@mui/material/Grid2";
 import Project from "../components/Project";
-import * as React from "react";
 import { FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
 import {
   SiTypescript,
   SiMongodb,
   SiExpress,
   SiGooglemaps,
+  SiCplusplus,
+  SiCmake,
+  SiLinux,
 } from "react-icons/si";
 import "./Projects.css";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Projects() {
+  const svgRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Check if the SVG is in the viewport
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust threshold as needed (0.5 means 50% visibility)
+    );
+
+    if (svgRef.current) {
+      observer.observe(svgRef.current);
+    }
+
+    return () => {
+      if (svgRef.current) {
+        observer.unobserve(svgRef.current);
+      }
+    };
+  }, []);
   return (
     <>
       <Grid
@@ -124,6 +155,46 @@ export default function Projects() {
               </>
             }
             link="https://github.com/SimonFraiberg/DiborDocker"
+          />
+        </Grid>
+
+        <Grid size={{ md: 12, lg: 6 }}>
+          <Project
+            headline="KNN Classifier Server"
+            subHeadline="Advanced Programming Project"
+            gif="/knn.gif"
+            text={
+              <>
+                <p>
+                  The project is a KNN Classifier Server implemented in{" "}
+                  <span className="highlight">C++</span>. It allows users to
+                  upload and classify datasets using multiple distance
+                  algorithms. Users interact with a menu-driven system to
+                  upload, classify, and view results.
+                </p>
+                <p>
+                  This project utilizes a multithreaded server for handling
+                  multiple clients simultaneously and implements five different
+                  distance formulas within a static distance class.
+                </p>
+
+                <div className="image-container">
+                  <img
+                    src="/knnServer.svg"
+                    alt="KNN Classifier Server Interface"
+                    className="project-image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="tech-icons">
+                  <SiCplusplus title="C++" />
+                  <SiCmake title="CMake" />
+                  <SiLinux title="Linux" />
+                </div>
+              </>
+            }
+            link="https://github.com/SimonFraiberg/AdvancedProgramming-1-part-4"
           />
         </Grid>
       </Grid>
