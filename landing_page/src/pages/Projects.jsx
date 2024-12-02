@@ -340,7 +340,7 @@ export default function Projects() {
                     justifyContent: "center",
                   }}
                 >
-                  <img src="under_construction.gif"></img>
+                  <img src="under.svg" width={250} />
                 </div>
                 <p>
                   Currently, I am working on finalizing the recipe upload
