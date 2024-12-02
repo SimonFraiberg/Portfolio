@@ -7,6 +7,8 @@ import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Button, Box } from "@mui/material";
+import Grid from "@mui/material/Grid2";
+
 import "./project.css";
 export default function Project({
   headline,
@@ -32,19 +34,30 @@ export default function Project({
         position: "relative",
       }}
     >
-      <div>
-        <img className="gif" src={gif}></img>
-
-        <CardHeader
-          sx={{ color: "white" }}
-          title={headline}
-          titleTypographyProps={{ sx: { fontSize: "2rem" } }}
-          subheader={subHeadline}
-          subheaderTypographyProps={{
-            sx: { color: "lightgray", fontSize: "1.2rem" },
+      <Grid container spacing={2}>
+        <Grid size={{ xxs: 12, md: 6 }}>
+          <CardHeader
+            sx={{ color: "white" }}
+            title={headline}
+            titleTypographyProps={{ sx: { fontSize: "2rem" } }}
+            subheader={subHeadline}
+            subheaderTypographyProps={{
+              sx: { color: "lightgray", fontSize: "1.2rem" },
+            }}
+          ></CardHeader>
+        </Grid>
+        <Grid
+          size={{ xxs: 12, md: 6 }}
+          sx={{
+            alignContent: "flex-end",
+            justifyContent: "flex-end",
+            display: "flex",
+            position: "relative",
+            right: "0",
           }}
-        ></CardHeader>
-
+        >
+          <img className="gif" src={gif}></img>
+        </Grid>
         <CardContent>
           <Typography
             sx={{ fontSize: "1.2rem", color: "white" }}
@@ -53,7 +66,7 @@ export default function Project({
             {text}
           </Typography>
         </CardContent>
-      </div>
+      </Grid>
       <CardActions
         sx={{ justifyContent: "center", paddingBottom: 2 }}
       ></CardActions>{" "}

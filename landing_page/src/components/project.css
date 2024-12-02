@@ -1,13 +1,4 @@
 .gif {
-  position: absolute;
   height: 80px;
-  right: 0;
-  margin-left: 20px;
-  padding: 15px;
-}
-
-@media (max-width: 600px) {
-  .gif {
-    scale: 0;
-  }
+  padding-top: 15px;
 }

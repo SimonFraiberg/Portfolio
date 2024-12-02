@@ -20,6 +20,8 @@ import {
   SiC,
   SiAssemblyscript,
   SiCss3,
+  SiApollographql,
+  SiMui,
 } from "react-icons/si";
 
 const categories = {
@@ -33,7 +35,7 @@ const categories = {
     { name: "Node.js", icon: <FaNodeJs color="#83cd29" size={50} /> },
     { name: "Express", icon: <SiExpress color="white" size={50} /> },
     { name: "GraphQL", icon: <SiGraphql color="#e10098" size={50} /> },
-    { name: "Apollo", icon: <img src="apollo.png" height={50} width={50} /> },
+    { name: "Apollo", icon: <SiApollographql size={50} /> },
   ],
   Languages: [
     { name: "JavaScript", icon: <SiJavascript color="#f7df1e" size={50} /> },
@@ -48,7 +50,7 @@ const categories = {
   ],
   Design: [
     { name: "CSS3", icon: <SiCss3 color="#1572b6" size={50} /> },
-    { name: "Material-UI", icon: <img src="mui.svg" height={50} width={50} /> },
+    { name: "Material-UI", icon: <SiMui size={50} color="#1572b6" /> },
     { name: "Bootstrap", icon: <SiBootstrap color="#7952b3" size={50} /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss color="#06b6d4" size={50} /> },
   ],

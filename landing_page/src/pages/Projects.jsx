@@ -12,6 +12,15 @@ import {
   SiApacheant,
   SiPython,
   SiC,
+  SiTailwindcss,
+  SiPostgresql,
+  SiGraphql,
+  SiNodedotjs,
+  SiNodemon,
+  SiAuth0,
+  SiApollographql,
+  SiMui,
+  SiBootstrap,
 } from "react-icons/si";
 import "./Projects.css";
 
@@ -68,6 +77,7 @@ export default function Projects() {
                   <SiGooglemaps title="Google Maps API" />
                   <FaNodeJs title="Node.js" />
                   <SiMongodb title="MongoDB" />
+                  <SiMui title="MUI" />
                 </div>
               </>
             }
@@ -125,6 +135,7 @@ export default function Projects() {
                   <SiExpress title="Express" />
                   <SiMongodb title="MongoDB" />
                   <FaDocker title="Docker" />
+                  <SiBootstrap title="bootstrap" />
                 </div>
               </>
             }
@@ -287,6 +298,74 @@ export default function Projects() {
               </>
             }
             link="https://github.com/SimonFraiberg/ParallelBFS"
+          />
+        </Grid>
+        <Grid size={{ md: 12, lg: 6 }}>
+          <Project
+            headline="PahustPashut"
+            subHeadline="Social Network for Sharing Recipes"
+            gif="/cooking.gif"
+            text={
+              <>
+                <p>
+                  PahustPashut is a social network designed for sharing and
+                  discovering recipes. Users can create accounts, share their
+                  own recipes, and explore recipes shared by others. The
+                  application features authentication powered by{" "}
+                  <span className="highlight">OAuth 2.0</span> with{" "}
+                  <span className="highlight">Auth0</span>, ensuring a secure
+                  and seamless login experience.
+                </p>
+                <p>
+                  The backend is built using{" "}
+                  <span className="highlight">Node.js, TypeScript,</span> and{" "}
+                  <span className="highlight">Express</span>, with user data and
+                  recipe information stored in a{" "}
+                  <span className="highlight">PostgreSQL</span> database. Auth0
+                  is integrated with the database to sync user credentials and
+                  manage session tokens effectively.
+                </p>
+                <p>
+                  The frontend, developed with{" "}
+                  <span className="highlight">React</span> and{" "}
+                  <span className="highlight">Tailwind CSS</span>, delivers a
+                  responsive and user-friendly interface. Users can browse,
+                  like, and save recipes, with the design focused on enhancing
+                  community engagement.
+                </p>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <img src="under_construction.gif"></img>
+                </div>
+                <p>
+                  Currently, I am working on finalizing the recipe upload
+                  mechanics by building a custom API using{" "}
+                  <span className="highlight">GraphQL</span> and{" "}
+                  <span className="highlight">Apollo</span>. This API will allow
+                  users to submit recipes with images, tags, and detailed
+                  instructions, streamlining data interactions between the front
+                  end and backend systems.
+                </p>
+                <div className="tech-icons">
+                  <FaReact title="React" />
+                  <SiTypescript title="TypeScript" />
+                  <SiNodedotjs title="Node.js" />
+                  <SiNodemon title="Nodemon" />
+                  <SiExpress title="Express" />
+                  <SiPostgresql title="PostgreSQL" />
+                  <SiGraphql title="GraphQL" />
+                  <SiAuth0 title="Auth0" />
+                  <SiApollographql title="Apollo" />
+                  <SiTailwindcss title="tailWind" />
+                </div>
+              </>
+            }
+            link="https://github.com/SimonFraiberg/PahustPashut"
           />
         </Grid>
       </Grid>
