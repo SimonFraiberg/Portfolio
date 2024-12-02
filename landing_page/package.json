@@ -19,6 +19,7 @@
     "@react-three/drei": "^9.117.3",
     "@react-three/fiber": "^8.17.10",
     "@tsparticles/react": "^3.0.0",
+    "@vercel/analytics": "^1.4.1",
     "lottie-react": "^2.4.0",
     "lottie-web": "^5.12.2",
     "mui": "^0.0.1",

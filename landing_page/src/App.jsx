@@ -8,6 +8,7 @@ import Resume from "./pages/Resume";
 import Skills from "./pages/Skills";
 import Scroll from "./components/Scroll";
 import Loading from "./components/animation/loading/Loading";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [load, upadateLoad] = useState(true);
@@ -26,6 +27,8 @@ export default function App() {
 
   return (
     <>
+      <Analytics />
+
       <BrowserRouter>
         <MyBar />
         <Scroll></Scroll>
