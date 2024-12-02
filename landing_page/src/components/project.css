@@ -1,4 +1,13 @@
 .gif {
   height: 80px;
   padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 600px) {
+  .gif {
+    position: relative;
+    display: flex;
+  }
 }

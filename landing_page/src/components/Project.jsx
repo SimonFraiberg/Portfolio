@@ -27,14 +27,19 @@ export default function Project({
         marginBottom: "0",
         border: 2,
         borderRadius: 5,
-        minHeight: "80vh",
+        minHeight: "85vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
         position: "relative",
       }}
     >
-      <Grid container spacing={2}>
+      <Grid
+        container
+        sx={{
+          justifyContent: "space-between",
+        }}
+      >
         <Grid size={{ xxs: 12, md: 6 }}>
           <CardHeader
             sx={{ color: "white" }}
@@ -48,13 +53,7 @@ export default function Project({
         </Grid>
         <Grid
           size={{ xxs: 12, md: 6 }}
-          sx={{
-            alignContent: "flex-end",
-            justifyContent: "flex-end",
-            display: "flex",
-            position: "relative",
-            right: "0",
-          }}
+          sx={{ display: "flex", flexDirection: "row", justifyContent: "end" }}
         >
           <img className="gif" src={gif}></img>
         </Grid>
