@@ -8,6 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ProgrammerAnimation from "../components/animation/programmer/ProgrammerAnimation";
 import { useState, useEffect } from "react";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   background: "#00000050",
@@ -19,6 +20,7 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
 }));
 export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
+  const isMobile = useMediaQuery("(max-width:1200px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -94,6 +96,14 @@ export default function HomePage() {
 
             <DemoPaper className="aboutPaper" square={false}>
               <div>
+                {isMobile && (
+                  <img
+                    src="profilePic.png"
+                    className="photoCircleMobile"
+                    alt="Profile"
+                  />
+                )}
+
                 <p>
                   I am a recent graduate from Bar Ilan University, holding a BSc
                   in Computer Science. My passion for technology began in my
@@ -136,14 +146,16 @@ export default function HomePage() {
               </div>
             </DemoPaper>
           </Grid>
-          <Grid
-            container
-            alignItems="center"
-            justifyContent="center"
-            size={{ xs: 12, lg: 5 }}
-          >
-            <img src="profilePic.png" className="photoCircle" alt="Profile" />
-          </Grid>
+          {!isMobile && (
+            <Grid
+              container
+              alignItems="center"
+              justifyContent="center"
+              size={{ xs: 12, lg: 5 }}
+            >
+              <img src="profilePic.png" className="photoCircle" alt="Profile" />
+            </Grid>
+          )}
         </Grid>
       </div>
     </>

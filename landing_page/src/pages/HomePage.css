@@ -27,9 +27,9 @@
 }
 .aboutPaper {
   position: relative;
-  color: rgb(255, 251, 251, 0.85);
-  padding: 2vw;
-  margin: 2vw;
+  color: #fffbfbd9;
+  margin: 4vw;
+  margin-right: 0vw;
   font-size: 1.2rem;
 }
 
@@ -123,6 +123,22 @@
   border-radius: 1000px;
 }
 
+.photoCircleMobile {
+  display: block;
+  margin: auto;
+
+  height: 30vh;
+
+  border-radius: 1000px;
+}
+@media (max-width: 1200px) {
+  .aboutPaper {
+    padding: 5vw;
+    margin: 5vw;
+    font-size: 1.2rem;
+  }
+}
+
 /* Media query for smaller screens */
 @media (max-width: 600px) {
   /* Stack elements vertically */
@@ -158,10 +174,5 @@
     height: auto;
     backdrop-filter: blur(5px); /* Adjust blur intensity */
     border-radius: 1000px;
-  }
-  .aboutPaper {
-    padding: 5vw;
-    margin: 5vw;
-    font-size: 1.2rem;
   }
 }
