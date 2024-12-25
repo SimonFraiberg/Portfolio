@@ -86,7 +86,7 @@ export default function MyBar() {
                 open={drawerOpen}
                 onClose={toggleDrawer(false)}
               >
-                <List>
+                <List className="drawer">
                   {menuItems.map((item, index) => (
                     <ListItem
                       sx={{ marginRight: "20px" }}
@@ -97,7 +97,9 @@ export default function MyBar() {
                         setDrawerOpen(false);
                       }}
                     >
-                      <ListItemIcon>{item.icon}</ListItemIcon>
+                      <ListItemIcon sx={{ color: "white" }}>
+                        {item.icon}
+                      </ListItemIcon>
                       <ListItemText primary={item.text} />
                     </ListItem>
                   ))}

@@ -10,6 +10,12 @@
   transition: "background 0.3s ease, backdrop-filter 0.3s ease";
 }
 
+.drawer {
+  background-color: rgb(63, 22, 78);
+
+  color: white;
+  height: 100vh;
+}
 @media (max-width: 600px) {
   .toolbar {
     margin-left: 5vw;
