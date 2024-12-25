@@ -141,6 +141,13 @@
 
 /* Media query for smaller screens */
 @media (max-width: 600px) {
+  .greetingContainer {
+    background-image: none;
+    background-size: 100% 130%;
+    padding-bottom: 100px;
+    width: 100%;
+    top: 0;
+  }
   /* Stack elements vertically */
   .about {
     flex-direction: column;
