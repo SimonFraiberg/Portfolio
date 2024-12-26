@@ -7,8 +7,10 @@ import IconButton from "@mui/material/IconButton";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ProgrammerAnimation from "../components/animation/programmer/ProgrammerAnimation";
-import { useState, useEffect } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   background: "#00000050",
@@ -18,21 +20,21 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
   borderRadius: "8px",
   boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
 }));
+
 export default function HomePage() {
-  const [scrolled, setScrolled] = useState(false);
   const isMobile = useMediaQuery("(max-width:1200px)");
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 500);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    AOS.init({
+      duration: 750,
+      easing: "ease-in-out",
+      once: true, // Ensures animations play only once
+    });
   }, []);
 
   return (
     <>
+      {/* Top Section Animates Immediately */}
       <Grid
         alignItems="center"
         justifyContent="center"
@@ -40,7 +42,13 @@ export default function HomePage() {
         spacing={1}
         className="greetingContainer"
       >
-        <Grid alignItems="center" justifyContent="center" size={{ lg: 7 }}>
+        <Grid
+          alignItems="center"
+          justifyContent="center"
+          lg={7}
+          data-aos="fade-right"
+          data-aos-offset="-500"
+        >
           <div className="greeting">
             <h1>
               Hello
@@ -68,10 +76,17 @@ export default function HomePage() {
             </IconButton>
           </div>
         </Grid>
-        <Grid alignItems="center" justifyContent="center" size={{ lg: 5 }}>
-          <ProgrammerAnimation></ProgrammerAnimation>
+        <Grid
+          alignItems="center"
+          justifyContent="center"
+          lg={5}
+          data-aos="fade-left"
+          data-aos-offset="-500"
+        >
+          <ProgrammerAnimation />
         </Grid>
       </Grid>
+
       <div
         style={{
           alignContent: "center",
@@ -80,9 +95,10 @@ export default function HomePage() {
         }}
       >
         <Divider />
-        {!scrolled && <img className="arrow" src="/arrow.gif"></img>}
+        <img className="arrow" src="/arrow.gif" alt="Scroll Down" />
       </div>
 
+      {/* About Section Animates on Scroll */}
       <div className="aboutMe">
         <Grid container alignItems="center" justifyContent="center" spacing={1}>
           <Grid
@@ -91,6 +107,8 @@ export default function HomePage() {
             justifyContent="center"
             zIndex={100}
             size={{ lg: 7 }}
+            data-aos="fade-up"
+            data-aos-offset="-750"
           >
             <h1 className="titleAbout">About Me</h1>
 
@@ -152,6 +170,8 @@ export default function HomePage() {
               alignItems="center"
               justifyContent="center"
               size={{ xs: 12, lg: 5 }}
+              data-aos="fade-up"
+              data-aos-offset="-750"
             >
               <img src="profilePic.png" className="photoCircle" alt="Profile" />
             </Grid>
