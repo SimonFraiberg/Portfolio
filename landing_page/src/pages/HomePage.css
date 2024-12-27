@@ -1,3 +1,26 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initial state for the About Me section */
+.aboutMe.hidden {
+  opacity: 0;
+  transform: translateY(20px); /* Offset for fadeIn animation */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Visible state for the About Me section */
+.aboutMe.visible {
+  animation: fadeIn 1s ease-out forwards;
+}
+
 .greetingContainer {
   background-image: url("/background.jpg");
   background-size: 100% 130%;
@@ -29,6 +52,7 @@
   position: relative;
   color: #fffbfbd9;
   margin: 4vw;
+  margin-bottom: 0;
   margin-right: 0vw;
   font-size: 1.2rem;
 }

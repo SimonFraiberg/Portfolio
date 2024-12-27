@@ -18,9 +18,9 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
   borderRadius: "8px",
   boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
 }));
+
 export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
-  const isMobile = useMediaQuery("(max-width:1200px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +29,30 @@ export default function HomePage() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isMobile = useMediaQuery("(max-width:1200px)");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const aboutSection = document.querySelector(".aboutMe");
+    if (aboutSection) observer.observe(aboutSection);
+
+    return () => {
+      if (aboutSection) observer.unobserve(aboutSection);
+    };
   }, []);
 
   return (
@@ -83,7 +107,8 @@ export default function HomePage() {
         {!scrolled && <img className="arrow" src="/arrow.gif"></img>}
       </div>
 
-      <div className="aboutMe">
+      {/* About Section with Scroll-triggered Animation */}
+      <div className="aboutMe hidden">
         <Grid container alignItems="center" justifyContent="center" spacing={1}>
           <Grid
             container
