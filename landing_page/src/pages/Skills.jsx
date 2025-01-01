@@ -34,8 +34,8 @@ const categories = {
     { name: "React", icon: <FaReact color="#61dafb" size={50} /> },
     { name: "Node.js", icon: <FaNodeJs color="#83cd29" size={50} /> },
     { name: "Express", icon: <SiExpress color="white" size={50} /> },
-    { name: "GraphQL", icon: <SiGraphql color="#e10098" size={50} /> },
-    { name: "Apollo", icon: <SiApollographql size={50} /> },
+    /*{ name: "GraphQL", icon: <SiGraphql color="#e10098" size={50} /> },
+    {/* name: "Apollo", icon: <SiApollographql size={50} /> },*/
   ],
   Languages: [
     { name: "JavaScript", icon: <SiJavascript color="#f7df1e" size={50} /> },
@@ -81,7 +81,7 @@ const Skills = () => {
       sx={{ padding: "10vh", textAlign: "center" }}
     >
       {Object.keys(categories).map((category) => (
-        <Box key={category} sx={{ marginBottom: "2vh" }}>
+        <Box key={category}>
           <Typography variant="h5" gutterBottom color="white">
             {category}
           </Typography>
